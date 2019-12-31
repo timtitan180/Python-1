@@ -4,31 +4,31 @@ def simpleColor(r,g,b):
     g=int(g)
     b=int(b)
     try:
-        #ROJO --------------------------------------------------
+        #RED --------------------------------------------------
         if r > g and r > b:
 
-            rg = diff(r,g) #distancia rojo a verde
-            rb = diff(r,b) #distancia rojo a azul
+            rg = diff(r,g) #comparing red and green
+            rb = diff(r,b) #comparing red and blue
 
             if g < 65 and  b < 65 and  rg > 60: #azul y verde sin luz
-                return "ROJO"
+                return "RED"
 
-            gb=diff(g,b) #distancia de verde a azul
+            gb=diff(g,b) #getting the difference of green and blue
 
             if rg < rb: # Verde mayor que Azul
                 if gb < rg: #Verde mas cerca de Azul
                     if gb >=30 and rg >= 80:
-                       return "NARANJA"
+                       return "ORANGE"
                     elif gb<=20 and rg >= 80:
-                        return "ROJO"
+                        return "RED"
                     elif gb<=20 and b > 175:
-                        return "CREMA"
+                        return "CREAM"
 
                     else:
                        return "CHOCOLATE"
                 else: #Verde mas cerca de Rojo
                         if rg > 60:
-                            return "NARANJA*"
+                            return "ORANGE*"
                         elif r > 125:
                             return "AMARILLO"
                         else:
